@@ -23,6 +23,7 @@ public class Employee {
     public double getBaseSalary() {
         return baseSalary; }
 
+
     public void setBaseSalary(double baseSalary) {
         if (baseSalary < 0) {
             System.out.println("Base salary cannot be negative!");
@@ -31,4 +32,14 @@ public class Employee {
             this.baseSalary = baseSalary;
         }
     }
+
+
+    public double calculateSalary() {
+        return baseSalary; }
+
+
+    public void displayInfo() {
+        System.out.println("ID: " + id + " | Name: " + name + " | Total Salary: $" + calculateSalary());
+    }
+
 }
