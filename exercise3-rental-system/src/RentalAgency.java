@@ -72,6 +72,27 @@ public class RentalAgency {
         System.out.println("Days: " + days);
         System.out.println("Total cost: $" + totalCost);
         System.out.println("—————————");
+
+
     }
+
+
+    public void returnVehicle(String licensePlate) {
+        Vehicle vehicle = findVehicle(licensePlate);
+
+        if (vehicle == null) {
+            System.out.println("Error: vehicle with plate " + licensePlate + " not found.");
+            return;
+        }
+        if (!vehicle.isRented()) {
+            System.out.println("Error: vehicle " + licensePlate + " was not rented.");
+            return;
+        }
+
+        vehicle.returnVehicle();
+        System.out.println("Vehicle " + vehicle.getModel() + " (" + licensePlate + ") returned successfully.");
+    }
+
+
 
 }
