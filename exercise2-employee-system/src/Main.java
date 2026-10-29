@@ -11,5 +11,9 @@ public class Main {
         System.out.printf("Balance after attempt to deposit: $%.2f%n", account.getBalance());
 
 
+        System.out.println("\n2. Depositing $500:");
+        account.deposit(500.00);
+        System.out.printf("Current balance: $%.2f%n", account.getBalance());
+
     }
 }
