@@ -20,6 +20,9 @@ public class FullTimeEmployee extends Employee {
         this.medicalAllowance = medicalAllowance;
     }
 
-
+    @Override
+    public double calculateSalary() {
+        return getBaseSalary() + bonus + medicalAllowance;
+    }
 
 }
