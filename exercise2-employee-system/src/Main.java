@@ -19,5 +19,13 @@ public class Main {
         System.out.println("\n3. Attempt withdrawal of $2,000:");
         account.withdraw(2000.00);
         System.out.printf("Balance after attempt: $%.2f%n", account.getBalance());
+
+
+        System.out.println("\n4. Withdraw $300:");
+        account.withdraw(300.00);
+        System.out.printf("Current balance: $%.2f%n", account.getBalance());
+
+
+        account.displayAccountInfo();
     }
 }
