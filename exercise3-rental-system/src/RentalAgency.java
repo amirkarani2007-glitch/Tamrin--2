@@ -31,4 +31,18 @@ public class RentalAgency {
         }
         return null;
     }
+
+    public void displayAvailableVehicles() {
+        System.out.println("=== Available vehicles at " + agencyName + " ===");
+        boolean found = false;
+        for (Vehicle v : fleet) {
+            if (!v.isRented()) {
+                v.displayDetails();
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No vehicles available.");
+        }
+    }
 }
