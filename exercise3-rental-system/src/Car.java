@@ -19,7 +19,14 @@ public class Car extends Vehicle {
 
     @Override
     public double calculateRentalCost(int days) {
+
         return super.calculateRentalCost(days) + serviceFee;
+    }
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("   Type: Car | Seats: " + numberOfSeats);
     }
 
 
