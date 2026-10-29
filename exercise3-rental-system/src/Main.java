@@ -26,5 +26,6 @@ public class Main {
         agency.displayAvailableVehicles();
         System.out.println();
 
+
     }
 }
