@@ -40,5 +40,11 @@ public class Vehicle {
         return dailyRate * days;
     }
 
+    public void displayDetails() {
+        System.out.println("Plate: " + licensePlate + " | Model: " + model
+                + " | Daily Rate: $" + dailyRate
+                + " | Status: " + (isRented ? "Rented" : "Available"));
+    }
+
 
 }
