@@ -1,6 +1,6 @@
 public class Car extends Vehicle {
 
-    private static final double serviceFee = 15.0;
+    private static final double serviceFee = 11.0;
 
     private int numberOfSeats;
 
@@ -8,4 +8,20 @@ public class Car extends Vehicle {
         super(licensePlate, model, dailyRate);
         this.numberOfSeats = numberOfSeats;
     }
+
+    public int getNumberOfSeats() {
+        return numberOfSeats;
+    }
+
+    public void setNumberOfSeats(int numberOfSeats) {
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    @Override
+    public double calculateRentalCost(int days) {
+        return super.calculateRentalCost(days) + serviceFee;
+    }
+
+
+
 }

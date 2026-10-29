@@ -1,7 +1,7 @@
 public class Motorcycle extends Vehicle {
 
     private static final int longTermDays = 7;
-    private static final double discountRate = 0.10;
+    private static final double discountRate = 0.07;
 
     private boolean hasHelmetIncluded;
 
