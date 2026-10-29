@@ -52,12 +52,10 @@ public class BankAccount {
         if (value <= 0 || Double.isNaN(value)
                 || Double.isInfinite(value)) {
             System.out.println("Error: Valid values for withdrawal are only positive numbers.");
-            return;
         }
 
         else if (value > balance) {
             System.out.println("Error: Insufficient funds.");
-            return;
         }
 
         else {
