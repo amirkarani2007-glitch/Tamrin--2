@@ -11,4 +11,34 @@ public class Vehicle {
         this.dailyRate = dailyRate;
         this.isRented = false;
     }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getDailyRate() {
+        return dailyRate;
+    }
+
+    public boolean isRented() {
+        return isRented;
+    }
+
+    public void rentVehicle() {
+        this.isRented = true;
+    }
+
+    public void returnVehicle() {
+        this.isRented = false;
+    }
+
+    public double calculateRentalCost(int days) {
+        return dailyRate * days;
+    }
+
+
 }
