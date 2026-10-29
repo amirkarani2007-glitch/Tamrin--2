@@ -6,7 +6,7 @@ public class Main {
         account.displayAccountInfo();
 
 
-        System.out.println("\n1. Attempting negative deposit:");
+        System.out.println("\n1. Attempting negative deposit (-200):");
         account.deposit(-200.00);
         System.out.printf("Balance after attempt to deposit: $%.2f%n", account.getBalance());
 
