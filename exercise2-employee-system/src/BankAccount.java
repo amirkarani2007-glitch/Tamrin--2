@@ -16,6 +16,20 @@ public class BankAccount {
         }
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        if (ownerName == null || ownerName.isBlank()) {
+            System.out.println("Error: Owner's name cannot be null or blank.");
+            return;
+        }
+        this.ownerName = ownerName;
+    }
 
 }
