@@ -32,8 +32,39 @@ public class BankAccount {
         }
         this.ownerName = ownerName;
     }
+
     public double getBalance() {
         return balance;
     }
+
+    public void deposit(double value) {
+        if ((value <= 0) || (Double.isNaN(value)) || Double.isInfinite(value)) {
+            System.out.println("Error: Valid values for deposition are only positive numbers.");
+        }
+
+        else {
+            balance += value;
+            System.out.printf("Deposit successful: $%.2f%n", value);
+        }
+    }
+
+    public void withdraw(double value) {
+        if (value <= 0 || Double.isNaN(value)
+                || Double.isInfinite(value)) {
+            System.out.println("Error: Valid values for withdrawal are only positive numbers.");
+            return;
+        }
+
+        else if (value > balance) {
+            System.out.println("Error: Insufficient funds.");
+            return;
+        }
+
+        else {
+            balance -= value;
+            System.out.printf("Withdrawal successful: $%.2f%n", value);
+        }
+    }
+
 
 }
