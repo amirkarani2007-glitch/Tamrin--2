@@ -20,6 +20,7 @@ public class BankAccount {
         return accountNumber;
     }
 
+
     public String getOwnerName() {
         return ownerName;
     }
@@ -30,6 +31,9 @@ public class BankAccount {
             return;
         }
         this.ownerName = ownerName;
+    }
+    public double getBalance() {
+        return balance;
     }
 
 }
