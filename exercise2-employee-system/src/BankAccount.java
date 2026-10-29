@@ -66,5 +66,10 @@ public class BankAccount {
         }
     }
 
-
+    public void displayAccountInfo() {
+        System.out.println("\n      Bank Account Information        ");
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Owner's Name: " + ownerName);
+        System.out.printf("Balance: $%.2f%n", balance);
+    }
 }
