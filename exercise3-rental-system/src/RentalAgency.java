@@ -45,4 +45,33 @@ public class RentalAgency {
             System.out.println("No vehicles available.");
         }
     }
+
+    public void rentVehicle(String licensePlate, int days) {
+        if (days <= 0) {
+            System.out.println("Error: number of days must be greater than 0.");
+            return;
+        }
+
+        Vehicle vehicle = findVehicle(licensePlate);
+
+        if (vehicle == null) {
+            System.out.println("Error: vehicle with plate " + licensePlate + " not found.");
+            return;
+        }
+        if (vehicle.isRented()) {
+            System.out.println("Error: vehicle " + licensePlate + " is already rented.");
+            return;
+        }
+
+        vehicle.rentVehicle();
+        double totalCost = vehicle.calculateRentalCost(days);
+
+        System.out.println("— Rental Confirmation —");
+        System.out.println("Agency: " + agencyName);
+        System.out.println("Vehicle: " + vehicle.getModel() + " (" + vehicle.getLicensePlate() + ")");
+        System.out.println("Days: " + days);
+        System.out.println("Total cost: $" + totalCost);
+        System.out.println("—————————");
+    }
+
 }
