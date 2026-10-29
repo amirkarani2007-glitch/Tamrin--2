@@ -10,4 +10,28 @@ public class Motorcycle extends Vehicle {
         this.hasHelmetIncluded = hasHelmetIncluded;
     }
 
+
+    public boolean hasHelmetIncluded() {
+        return hasHelmetIncluded;
+    }
+
+    public void setHasHelmetIncluded(boolean hasHelmetIncluded) {
+        this.hasHelmetIncluded = hasHelmetIncluded;
+    }
+
+    @Override
+    public double calculateRentalCost(int days) {
+        double cost = super.calculateRentalCost(days);
+        if (days >= longTermDays) {
+            cost = cost * (1 - discountRate);
+        }
+        return cost;
+    }
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("   Type: Motorcycle | Helmet included: " + (hasHelmetIncluded ? "Yes" : "No"));
+    }
+
 }
