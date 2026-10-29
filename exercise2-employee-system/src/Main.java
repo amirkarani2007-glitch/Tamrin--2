@@ -15,5 +15,9 @@ public class Main {
         account.deposit(500.00);
         System.out.printf("Current balance: $%.2f%n", account.getBalance());
 
+
+        System.out.println("\n3. Attempt withdrawal of $2,000:");
+        account.withdraw(2000.00);
+        System.out.printf("Balance after attempt: $%.2f%n", account.getBalance());
     }
 }
